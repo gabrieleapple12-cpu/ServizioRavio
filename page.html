@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Servizio Ravio</title>
+  <link rel="icon" href="logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <img src="logo.png" id ="logo" alt="Logo Ravio" class="logo">
+  <div class="container">
+    <h1>Invia Email</h1>
+    <form id="mailForm">
+      <label for="to">Destinatario</label>
+      <input type="email" id="to" name="to" placeholder="Email destinatario" required>
+
+      <label for="subject">Titolo</label>
+      <input type="text" id="subject" name="subject" placeholder="Titolo dell'email" required>
+
+      <label for="message">Testo</label>
+      <textarea id="message" name="message" placeholder="Scrivi qui il testo..." required></textarea>
+
+      <button type="submit">📨 Invia</button>
+    </form>
+    <p id="response"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

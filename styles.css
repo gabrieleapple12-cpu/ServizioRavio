@@ -1,0 +1,56 @@
+/* Reset base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgba(151, 5, 151, 0.87);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+/* Titolo */
+h1 {
+  font-size: 3em;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+  letter-spacing: 1px;
+}
+
+/* Paragrafo */
+p {
+  font-size: 1.1em;
+  font-weight: 500;
+  margin-bottom: 2em;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+/* Pulsante */
+button {
+  background-color: #fff;
+  color: rgba(151, 5, 151, 0.87);
+  font-weight: bold;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.2em;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+button:hover {
+  background-color: rgba(151, 5, 151, 0.87);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+}

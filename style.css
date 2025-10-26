@@ -1,0 +1,121 @@
+/* Stile base */
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+  margin: 0;
+  display: flex;
+  flex-direction: column; /* ← cambio importante */
+  justify-content: flex-start; /* posiziona in alto */
+  align-items: center;
+  height: 100vh;
+  padding-top: 40px; /* spazio sopra */
+}
+
+/* Logo */
+#logo {
+  display: block;
+  width: 400px;        /* più lungo ma non enorme */
+  max-width: 80%;      /* adattabile su schermi piccoli */
+  height: auto;
+  margin-bottom: 30px; /* spazio sotto */
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: fadeSlideIn 1.2s ease forwards;
+}
+
+/* Definizione dell'animazione */
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Contenitore principale */
+.container {
+  background: rgba(151, 5, 151, 0.87);
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  width: 350px;
+
+  /* Animazione iniziale */
+  opacity: 0;
+  transform: translateY(30px); /* ← parte dal basso */
+  animation: fadeSlideUp 1.2s ease forwards 0.2s; /* ritardo di 0.6s */
+}
+
+/* Definizione dell'animazione */
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px); /* parte da sotto */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* arriva in posizione */
+  }
+}
+
+
+
+/* Titolo */
+h1 {
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+/* Etichette e campi input */
+label {
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 5px;
+  display: block;
+}
+
+input, textarea, button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ffffff;
+  margin-bottom: 15px;
+  font-size: 14px;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  border-color: #1976d2;
+  box-shadow: 0 0 5px rgba(25, 118, 210, 0.3);
+  outline: none;
+}
+
+/* Bottone invio */
+button {
+  background-color: #1976d2;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0d47a1;
+}
+
+/* Messaggio di risposta */
+#response {
+  text-align: center;
+  font-weight: bold;
+  color: #333;
+  margin-top: 10px;
+}
+
+#response.success {
+  color: #388e3c;
+}
